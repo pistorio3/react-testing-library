@@ -6,19 +6,19 @@ import userEvent from '@testing-library/user-event';
 import renderWithRouter from '../helper/renderWithRouter';
 import App from '../App';
 
-test('renders a reading with the text `Pokédex`', () => {
-  const { getByText } = render(
-    <MemoryRouter>
-      <App />
-    </MemoryRouter>,
-  );
-  const heading = getByText(/Pokédex/i);
+// test('renders a reading with the text `Pokédex`', () => {
+//   const { getByText } = render(
+//     <MemoryRouter>
+//       <App />
+//     </MemoryRouter>,
+//   );
+//   const heading = getByText(/Pokédex/i);
 
-  expect(heading).toBeInTheDocument();
-});
+//   expect(heading).toBeInTheDocument();
+// });
 
 describe('1 - Testa o componente <App.js />', () => {
-  test('Testa se a página principal é renderizada no caminho de URL /', () => {
+  test('Verifica se a página principal é renderizada no caminho de URL /', () => {
     const { getByText } = render(
       <MemoryRouter initialEntries={ ['/'] }>
         <App />

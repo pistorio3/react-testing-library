@@ -1,6 +1,6 @@
 import React from 'react';
-
 import renderWithRouter from '../helper/renderWithRouter';
+
 import { About } from '../components';
 
 describe('2 - Testa o componente <About.js />', () => {
@@ -11,7 +11,7 @@ describe('2 - Testa o componente <About.js />', () => {
     expect(paragraph).toBeInTheDocument();
   });
 
-  test('Verifica se a página contém um heading h2 com o texto "About Pokédex"', () => {
+  test('Verifica se a página contém um heading h2 com o texto "About Pokédex".', () => {
     const { getByRole } = renderWithRouter(<About />);
     const heading = getByRole('heading', {
       level: 2,
@@ -31,7 +31,7 @@ describe('2 - Testa o componente <About.js />', () => {
     expect(paragraphTwo).toBeInTheDocument();
   });
 
-  test('Verifica se a página contém a seguinte imagem de uma Pokédex:', () => {
+  test('Verifica se a página contém a imagem de uma Pokédex.', () => {
     const { getByRole } = renderWithRouter(<About />);
     const srcImg = getByRole('img');
 
